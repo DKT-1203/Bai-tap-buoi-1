@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý công việc cá nhân</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mini Task Manager</h1>
+        
+        <!-- Form thêm công việc -->
+        <form id="task-form">
+            <input type="text" id="task-name" placeholder="Nhập tên công việc..." required>
+            <input type="date" id="task-deadline">
+            <select id="task-priority">
+                <option value="Cao">Ưu tiên: Cao</option>
+                <option value="Trung bình">Ưu tiên: Trung bình</option>
+                <option value="Thấp">Ưu tiên: Thấp</option>
+            </select>
+            <button type="submit">Thêm công việc</button>
+        </form>
+        <p id="error-message" class="error-msg">Tên công việc không được để trống!</p>
+
+        <!-- Tìm kiếm và lọc trạng thái -->
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Tìm kiếm công việc...">
+            <select id="filter-status">
+                <option value="all">Lọc: Tất cả</option>
+                <option value="incomplete">Lọc: Chưa hoàn thành</option>
+                <option value="completed">Lọc: Đã hoàn thành</option>
+            </select>
+        </div>
+
+        <!-- Vùng chứa danh sách công việc -->
+        <ul id="task-list"></ul>
+    </div>
+
+    <!-- Footer thông tin sinh viên -->
+    <footer>
+        <p>Họ tên: Đào Khánh Trung - MSSV: 224001757 - Lớp: TUD D2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
